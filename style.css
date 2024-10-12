@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background-color: #e7f7e1; /* 밝은 민트 계열 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app * {
+    font-family: 'Nanum Gothic', 'Roboto', 'Arial', sans-serif;
+}
+
+.app {
+    background: #f1ffec; /* 연두색 배경 */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.app:hover {
+    transform: scale(1.02);
+}
+
+.app h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #4caf50; /* 진한 연두색 텍스트 */
+    margin-bottom: 25px;
+}
+
+#list {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 20px auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background: #e9ffe8; /* 연한 연두색 */
+    border: 1px solid #cdeacc;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover {
+    background: #daf5d8; /* 호버 시 조금 더 짙은 연두색 */
+    transform: translateY(-3px);
+}
+
+.item.complete {
+    opacity: 0.8;
+    background: #d1f0ce;
+}
+
+.item.complete input[type='text'] {
+    text-decoration: line-through;
+}
+
+input[type='text'] {
+    flex: 1;
+    padding: 8px;
+    margin: 0 12px;
+    border: none;
+    border-bottom: 2px solid #cdeacc; /* 연한 그린 계열 */
+    background: transparent;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease;
+}
+
+input[type='text']:focus {
+    border-bottom: 2px solid #66bb6a; /* 포커스 시 진한 연두색 */
+}
+
+input[type='text']:disabled {
+    color: #777777;
+}
+
+input[type='checkbox'] {
+    cursor: pointer;
+    accent-color: #66bb6a; /* 체크박스 색상 연두색 */
+}
+
+.actions {
+    display: flex;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #4caf50; /* 연두색 계열 아이콘 */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    color: #388e3c; /* 호버 시 조금 더 진한 그린 */
+    transform: scale(1.1);
+}
+
+.material-icons {
+    font-size: 22px;
+}
+
+#create-btn {
+    display: block;
+    width: 100%;
+    background: #66bb6a; /* 버튼에 연두색 계열 사용 */
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#create-btn:hover {
+    background: #388e3c; /* 버튼 호버 시 진한 그린 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Material Icons styling */
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Hide scrollbar for better appearance */
+#list::-webkit-scrollbar {
+    display: none;
+}
+#list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
